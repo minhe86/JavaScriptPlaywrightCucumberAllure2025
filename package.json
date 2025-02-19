@@ -1,0 +1,29 @@
+{
+  "name": "playwrightjs",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "test": "cucumber-js test",
+    "report": "allure serve allure-results"
+  },
+  "engines": {
+    "node": "^20.18.0",
+    "npm": "10.8.2"
+  },
+  "author": "Min He",
+  "license": "ISC",
+  "description": "Playwright with Cucumber",
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "@babel/register": "^7.25.9",
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.50.1",
+    "allure-commandline": "^2.32.2",
+    "allure-cucumberjs": "^3.1.0",
+    "allure-playwright": "^3.1.0",
+    "csv-parser": "^3.2.0",
+    "cucumber-playwright": "^1.2.1",
+    "lodash": "^4.17.21",
+    "playwright": "^1.50.1"
+  }
+}
