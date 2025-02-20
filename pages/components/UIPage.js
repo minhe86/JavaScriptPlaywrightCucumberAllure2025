@@ -13,4 +13,5 @@ export default class UIPage extends Component {
   openUrl = async () => {
     await this.page.goto(this.baseUrl);
   };
+
 }

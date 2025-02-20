@@ -1,6 +1,12 @@
 export default {
   paths: ["features/"],
-  import: ["@babel/register", "step-definitions/*.step.js"],
+  import: [
+    "@babel/register",
+    "step-definitions/support/world.js",
+    "step-definitions/support/support.js",
+    "step-definitions/*.step.js",
+  ],
+  requireModule: ["allure-cucumberjs"],
   formatOptions: {
     snippetInterface: "async-await",
   },
