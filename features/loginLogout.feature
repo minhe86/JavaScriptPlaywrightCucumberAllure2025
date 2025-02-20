@@ -15,4 +15,4 @@ Feature: Login and Verify all products details on home page then Log out.
 
     Examples:
       | UserName      | Password     | ProductName             |
-      | standard_user | secret_sauce | Sauce Labs Bolt T-ShirA |
+      | standard_user | secret_sauce | Sauce Labs Bolt T-Shirt |
