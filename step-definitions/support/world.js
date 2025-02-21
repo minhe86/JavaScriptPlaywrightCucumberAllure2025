@@ -1,6 +1,7 @@
 import { setWorldConstructor } from '@cucumber/cucumber';
 
-setWorldConstructor(function () {
+setWorldConstructor(function ({attach}) {
   this.browser = null;
   this.page = null;
+  this.attach = attach;
 });
