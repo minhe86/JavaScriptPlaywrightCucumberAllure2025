@@ -9,21 +9,19 @@ Scenario1 - Login Test: Validate that a user can log in successfully with valid 
 and that an error message is displayed for invalid credentials.
 
 Scenario2 - Product Purchase Test: Validate the end-to-end purchase process:
-▪ Log in.
-▪ Add a product to the cart.
-▪ Proceed to checkout and complete the purchase.
-▪ Log out.
+<ul>
+Log in -> Add a product to the cart. -> Proceed to checkout and complete the purchase. -> Log out.
+</ul>
 
 <h3> 2. API Tests </h3>
 Scenario1 - Get token and verify users and register resource and status code.
-▪ Obtain an authorization token.
-▪ Use API do a POST request to create a record.
-▪ Use API GET request to retrieve the record you added.
-
+<ul>
+Obtain an authorization token. -> Use API do a POST request to create a record. -> Use API GET request to retrieve the record you added.
+</ul>
 Scenario2 - Attempt to create a register resource with invalid data.
-▪ Use API attempt to do a POST request.
-▪ Verify that the response contains an error message.
-
+<ul>
+Use API attempt to do a POST request. -> Verify that the response contains an error message.
+</ul>
 
 <h2> Prerequisites </h2>
 <p>Ensure that you have the following installed:</p>
@@ -44,18 +42,19 @@ To generate Allure reports after the tests run, make sure you <strong>have Allur
 
 <h3> 4. Running Tests</h3>
 You can run your tests using the following commands:
-    <strong>npm run test</strong>
-This will:
+
+    npm run test
+*This will:
     Run the <strong>E2E</strong> tests using CucumberJS.
     Generate the Allure report results inside the allure-results/ directory.
 
-    <strong>npm run test:local</strong>
-This will:
+    npm run test:local
+*This will:
     Run the <strong>E2E</strong> tests using CucumberJS.
     Generate the cucumber html report results with console progress information, cucumber-report.html inside the project root directory.
 
-    <strong>npm run test:api</strong>
-This will:
+    npm run test:api
+*This will:
     Run the <strong>API</strong> tests only using CucumberJS.
     Generate the Allure report results inside the allure-results/ directory.
 
