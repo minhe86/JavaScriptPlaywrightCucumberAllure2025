@@ -1,7 +1,7 @@
 <h1> Playwright Automation Framework with CucumberJS & Allure Reporting</h1>
 <p>This repository contains an automation framework built using <strong>Playwright</strong>, <strong>JavaScript (ESM)</strong>, <strong>CucumberJS</strong>, and <strong>Allure reporting</strong> for <strong>E2E</strong> testing web applications.</p>
 
-<p>This is still an ongoing project, current purpose is for skills pickup and demonstration. Play Playwright with Cucumber(BDD) using this project which is using cucumber runner now, try to cover passing test data via different ways: cucumber step argument, data table, csv file; support dynamic page creation, dynamic getLocators ...... will add more features soon, like accessibility testing... will also try to use playright runner using playwright.config.js to compare later....</p>
+<p>This is still an ongoing project, current purpose is for skills pickup and demonstration. Play Playwright with Cucumber(BDD) which is using cucumber runner now, try to cover passing test data via different ways: cucumber step argument, data table, csv file; support dynamic page creation, dynamic getLocators ...... will add more features soon, like accessibility testing... will also try to use playright runner using playwright.config.js to compare later....</p>
 
 <h2> Special notes for assignment </h2>
 <h3> 1. Browser (UI) Tests </h3>
