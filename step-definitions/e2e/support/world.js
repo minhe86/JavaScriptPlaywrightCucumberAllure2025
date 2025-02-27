@@ -4,4 +4,5 @@ setWorldConstructor(function ({attach}) {
   this.browser = null;
   this.page = null;
   this.attach = attach;
+  this.products = [];
 });
