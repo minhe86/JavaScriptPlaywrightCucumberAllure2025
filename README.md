@@ -1,7 +1,28 @@
 <h1> Playwright Automation Framework with CucumberJS & Allure Reporting</h1>
 <p>This repository contains an automation framework built using <strong>Playwright</strong>, <strong>JavaScript (ESM)</strong>, <strong>CucumberJS</strong>, and <strong>Allure reporting</strong> for <strong>E2E</strong> testing web applications.</p>
 
-<p>This is still an ongoing project, current purpose is for skills pickup and demonstration. Play Playwright with Cucumber(BDD) using this project which is using cucumber runner now, try to cover passing test data via different ways: cucumber step argument, data table, csv file; support dynamic page creation, dynamic getLocators ...... will add more features soon, like api testing, accessibility testing... will also try to use playright runner using playwright.config.js to compare later....</p>
+<p>This is still an ongoing project, current purpose is for skills pickup and demonstration. Play Playwright with Cucumber(BDD) using this project which is using cucumber runner now, try to cover passing test data via different ways: cucumber step argument, data table, csv file; support dynamic page creation, dynamic getLocators ...... will add more features soon, like accessibility testing... will also try to use playright runner using playwright.config.js to compare later....</p>
+
+<h2> Special notes for assignment </h2>
+<h3> 1. Browser (UI) Tests </h3>
+Scenario1 - Login Test: Validate that a user can log in successfully with valid credentials
+and that an error message is displayed for invalid credentials.
+
+Scenario2 - Product Purchase Test: Validate the end-to-end purchase process:
+▪ Log in.
+▪ Add a product to the cart.
+▪ Proceed to checkout and complete the purchase.
+▪ Log out.
+
+<h3> 2. API Tests </h3>
+Scenario1 - Get token and verify users and register resource and status code.
+▪ Obtain an authorization token.
+▪ Use API do a POST request to create a record.
+▪ Use API GET request to retrieve the record you added.
+
+Scenario2 - Attempt to create a register resource with invalid data.
+▪ Use API attempt to do a POST request.
+▪ Verify that the response contains an error message.
 
 
 <h2> Prerequisites </h2>
@@ -19,16 +40,26 @@ Run the following command to install all the required dependencies:
 Cucumber Configuration (cucumber.mjs): This file contains configurations specific to Cucumber, such as the location of feature files and the step definition files.
 
 <h3> 3. Configure Allure Reporting</h3>
-To generate Allure reports after the tests run, make sure you have Allure installed globally or you can install it via npm install -g allure-commandline.
+To generate Allure reports after the tests run, make sure you <strong>have Allure installed globally</strong> or you can install it via npm install -g allure-commandline.
 
 <h3> 4. Running Tests</h3>
-You can run your tests using the following command:
-    npm run test
+You can run your tests using the following commands:
+    <strong>npm run test</strong>
 This will:
-    Run the tests using CucumberJS.
+    Run the <strong>E2E</strong> tests using CucumberJS.
     Generate the Allure report results inside the allure-results/ directory.
 
-<h3> 5. Viewing the Allure Report </h3>
+    <strong>npm run test:local</strong>
+This will:
+    Run the <strong>E2E</strong> tests using CucumberJS.
+    Generate the cucumber html report results with console progress information, cucumber-report.html inside the project root directory.
+
+    <strong>npm run test:api</strong>
+This will:
+    Run the <strong>API</strong> tests only using CucumberJS.
+    Generate the Allure report results inside the allure-results/ directory.
+
+<h3> 5. Viewing the Allure Report (Optional) </h3>
 After running the tests, you can generate and view the Allure report by running the following command:
     npm run report
 This will open a web server and display the Allure report in your browser.
@@ -42,3 +73,12 @@ This will open a web server and display the Allure report in your browser.
 
 ### [Failed Allure Result](screenshots/allure_2.png)
 ![](screenshots/allure_2.png)
+
+### [API Cucumber Result](screenshots/api_cucumber_2.png)
+![](screenshots/api_cucumber_2.png)
+
+### [All Allure Result](screenshots/allure_all.png)
+![](screenshots/allure_all.png)
+
+
+More snapshots could be found under screenshots folder for more reference.

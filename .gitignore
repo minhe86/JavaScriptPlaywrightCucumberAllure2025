@@ -9,3 +9,5 @@ node_modules/
 allure-report/
 allure-results/
 cucumber-report.html
+step-definitions/e2e/support/.DS_Store
+.DS_Store
