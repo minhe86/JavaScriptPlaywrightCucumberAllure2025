@@ -3,7 +3,7 @@
 Feature: Login and Verify all products details on home page then Log out.
 
   Scenario Outline: Login to SwagLabs application, verify home page all products details via different parameters, and log out.
-    Given User launches SwagLabs application
+    Given User launches SwagLabs application URL
     Then User is directed to "Login" page
     When User logs in the app using username "<UserName>" and password "<Password>"
     Then User is directed to "Home" page

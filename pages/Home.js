@@ -8,12 +8,14 @@ export default class HomePage extends UIPage {
   }
 
   burgerMenu = "button#react-burger-menu-btn";
+  shoppingCartLink = "  a.shopping_cart_link";
+
 
   getProductName = (productNo) => {
     return `a#item_${productNo}_title_link`;
   };
 
-  getProductInverntoryLocators = (productNo) => {
+  getProductInverntoryLocators = async (productNo) => {
     const selectedInventoryLocator = this.page
       .locator("div.inventory_item_description")
       .filter({ has: this.page.locator(this.getProductName(productNo)) });
@@ -30,7 +32,7 @@ export default class HomePage extends UIPage {
   };
 
   waitForDisplayed = async () => {
-    const product1Locators = this.getProductInverntoryLocators(1);
+    const product1Locators = await this.getProductInverntoryLocators(1);
     await product1Locators.productName.waitFor();
     await product1Locators.productDescription.waitFor();
     await product1Locators.productPrice.waitFor();
@@ -43,7 +45,7 @@ export default class HomePage extends UIPage {
     expect(await this.page.title()).toContain("Swag Labs");
 
     // verify product 1 details.
-    const product1Locators = this.getProductInverntoryLocators(1);
+    const product1Locators =await this.getProductInverntoryLocators(1);
     if (!(await product1Locators.productName.isVisible())) {
       throw new Error("Product 1 is not visible");
     } else {
@@ -67,7 +69,7 @@ export default class HomePage extends UIPage {
   };
 
   verifyProductDetails = async (product) => {
-    const productLocators = this.getProductInverntoryLocators(
+    const productLocators = await this.getProductInverntoryLocators(
       product.productNo
     );
 
@@ -97,8 +99,21 @@ export default class HomePage extends UIPage {
     }
   };
 
-  navigateToSideMenu = async (product) => {
+  navigateToSideMenu = async () => {
     expect(await this.page.locator(this.burgerMenu).isEnabled()).toBeTruthy();
     await this.page.locator(this.burgerMenu).click();
+  };
+
+  navigateToShoppingCart = async () => {
+    expect(await this.page.locator(this.shoppingCartLink).isEnabled()).toBeTruthy();
+    await this.page.locator(this.shoppingCartLink).click();
+  };
+
+  addProductToCart = async (product) => {
+    const productLocators = await this.getProductInverntoryLocators(product.productNo);
+    await productLocators.productAddRemoveButton.click();
+    expect(await productLocators.productAddRemoveButton.textContent()).toBe(
+      "Remove"
+    );
   };
 }

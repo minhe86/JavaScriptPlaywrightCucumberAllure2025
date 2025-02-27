@@ -1,4 +1,5 @@
 import Component from "./Component.js";
+import nconf from 'nconf';
 
 export default class UIPage extends Component {
   constructor(page) {
@@ -6,7 +7,7 @@ export default class UIPage extends Component {
     this.page = page;
   }
 
-  baseUrl = "https://www.saucedemo.com/";
+  baseUrl = nconf.get('swagLabsBaseUrl');
 
   waitForDisplayed = async () => {};
 
