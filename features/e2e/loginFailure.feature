@@ -1,4 +1,5 @@
 @ui
+@debug
 Feature: Login and Verify error message for invalid credentials.
 
   Scenario Outline: Login to SwagLabs application, verify an error message is displayed for invalid username/passoword or locked out user.

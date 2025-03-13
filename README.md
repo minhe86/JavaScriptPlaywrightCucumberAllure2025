@@ -1,26 +1,43 @@
 <h1> Playwright Automation Framework with CucumberJS & Allure Reporting</h1>
 <p>This repository contains an automation framework built using <strong>Playwright</strong>, <strong>JavaScript (ESM)</strong>, <strong>CucumberJS</strong>, and <strong>Allure reporting</strong> for <strong>E2E</strong> testing web applications.</p>
 
-<p>This is still an ongoing project, current purpose is for skills pickup and demonstration. Play Playwright with Cucumber(BDD) which is using cucumber runner now, try to cover passing test data via different ways: cucumber step argument, data table, csv file; support dynamic page creation, dynamic getLocators ...... will add more features soon, like accessibility testing... will also try to use playright runner using playwright.config.js to compare later....</p>
+<p>This is still an ongoing project, current purpose is for skills pickup and demonstration. Play Playwright with Cucumber(BDD) which is using cucumber runner now, try to cover passing test data via different ways: cucumber step argument, data table, csv file; support dynamic page creation, dynamic getLocators ...... will add more features soon, like accessibility testing... 
 
-<h2> Special notes for assignment </h2>
+Playright test runner related details please refer here - [README.md](./playwrightTestRunner/README.md)
+
+Project structure:
+<ul>
+├── api
+├── configs
+├── data
+├── features
+│   ├── api
+│   └── e2e
+├── pages
+└── step-definitions
+    ├── api
+    ├── e2e
+</ul>
+ </p>
+
+<h2> Notes for test scenarios </h2>
 <h3> 1. Browser (UI) Tests </h3>
-Scenario1 - Login Test: Validate that a user can log in successfully with valid credentials
-and that an error message is displayed for invalid credentials.
+<h4>Scenario1 - Login Test: Validate that a user can log in successfully with valid credentials
+and that an error message is displayed for invalid credentials by iterations.</h4>
 
-Scenario2 - Product Purchase Test: Validate the end-to-end purchase process:
+<h4>Scenario2 - Product Purchase Test: Validate the end-to-end purchase process:</h4>
 <ul>
 Log in -> Add a product to the cart. -> Proceed to checkout and complete the purchase. -> Log out.
 </ul>
 
-<h3> 2. API Tests </h3>
-Scenario1 - Get token and verify users and register resource and status code.
+<h3> 2. API Tests (via axios) </h3>
+<h4>Scenario1 - Get token and verify users and register resource and status code.</h4>
 <ul>
-Obtain an authorization token. -> Use API do a POST request to create a record. -> Use API GET request to retrieve the record you added.
+Obtain an authorization token. -> Use API do a POST request to create a record. -> Use API GET request to retrieve the record you added, and verify retrived record.
 </ul>
-Scenario2 - Attempt to create a register resource with invalid data.
+<h4>Scenario2 - Attempt to create a register resource with invalid data.</h4>
 <ul>
-Use API attempt to do a POST request. -> Verify that the response contains an error message.
+Use API attempt to do a POST request. -> Verify that the response contains an error messagen.
 </ul>
 
 <h2> Prerequisites </h2>
@@ -57,6 +74,12 @@ You can run your tests using the following commands:
 *This will:
     Run the <strong>API</strong> tests only using CucumberJS.
     Generate the Allure report results inside the allure-results/ directory.
+
+     npm run test:local -- --tags @debug   
+*This will:
+    Run the <strong>API</strong> tests with <strong>tag - @debug</strong> only using CucumberJS.
+    Generate the Allure report results inside the allure-results/ directory.
+
 
 <h3> 5. Viewing the Allure Report (Optional) </h3>
 After running the tests, you can generate and view the Allure report by running the following command:

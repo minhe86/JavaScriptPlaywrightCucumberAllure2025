@@ -13,4 +13,5 @@ export default {
     resultsDir: "allure-results",
   },
   parallel: 3,
+  retry: 2,
 };

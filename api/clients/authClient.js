@@ -3,7 +3,7 @@ import axios from 'axios';
 export default class AuthClient {
   constructor(baseUrl) {
     this.client = axios.create({
-      baseURL: baseUrl,
+      baseURL: baseUrl + '/',
       headers: { 'Content-Type': 'application/json' },
     });
   }

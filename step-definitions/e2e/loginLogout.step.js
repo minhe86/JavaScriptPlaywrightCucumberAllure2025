@@ -1,14 +1,11 @@
 import _ from "lodash";
 import { Given, When, Then, setDefaultTimeout } from "@cucumber/cucumber";
-import { ContentType } from "allure-js-commons";
 import UIPage from "../../pages/components/UIPage.js";
 import SideNavigationMenu from "../../pages/components/SideNavigationMenu.js";
 import LoginPage from "../../pages/Login.js";
 import HomePage from "../../pages/Home.js";
 import * as Pages from "../../pages/index.js";
-import { getProducts } from "../../data/utils.js";
 import nconf from "nconf";
-import { expect } from "@playwright/test";
 
 setDefaultTimeout(nconf.get("cucumberTimeout:default"));
 
