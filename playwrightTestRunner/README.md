@@ -3,8 +3,8 @@
 
 <p>This is still an ongoing project, current purpose is for skills pickup and demonstration. Play playwright without Cucumber(BDD) which is using playwright test runner (under DIR <project root>/playwrightTestRunner) which is sharing the same POM (under DIR <project root>/pages ) whith playwright + cuccumber framework.
 
-Project structure:
-<ul>
+## Project Structure:
+```
 ├── configs - shared env configs with playwright + cucumber framework.
 │   ├── config.api.json
 │   ├── config.default.json
@@ -14,7 +14,7 @@ Project structure:
 │   ├── README.md
 │   ├── configs
 │   └── step-definitions
-</ul>
+```
 
 </p>
 
