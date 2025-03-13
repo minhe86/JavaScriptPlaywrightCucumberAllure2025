@@ -5,19 +5,19 @@
 
 Playright test runner related details please refer here - [README.md](./playwrightTestRunner/README.md)
 
-Project structure:
-<ul>
+## Project Structure:
+```
 ├── api
 ├── configs
 ├── data
 ├── features
-│   ├── api
-│   └── e2e
+│ ├── api
+│ └── e2e
 ├── pages
 └── step-definitions
-    ├── api
-    ├── e2e
-</ul>
+│ ├── api
+│ └── e2e
+```
  </p>
 
 <h2> Notes for test scenarios </h2>
