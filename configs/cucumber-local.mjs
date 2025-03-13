@@ -12,4 +12,5 @@ export default {
     snippetInterface: "async-await",
   },
   dryRun: false,
+  retry: 2,
 };

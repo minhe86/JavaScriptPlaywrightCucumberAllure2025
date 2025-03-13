@@ -16,4 +16,5 @@ export default {
   //   resultsDir: "allure-results",
   // },
   dryRun: false,
+  retry: 2,
 };

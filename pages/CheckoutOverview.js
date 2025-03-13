@@ -49,13 +49,13 @@ export default class CheckoutOverviewPage extends UIPage {
       product.productName
     );
     const expectedPriceFormat = "$" + new Intl.NumberFormat("en-US", {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      }).format(product.productPrice);
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(product.productPrice);
     expect(await productLocators.productPrice.textContent()).toBe(
       expectedPriceFormat
     );
-   
+
   };
 
   verifyCheckoutInfoDetails = async (selectedProducts) => {
@@ -94,5 +94,5 @@ export default class CheckoutOverviewPage extends UIPage {
     expect(await this.page.locator(this.finishButton).isEnabled()).toBeTruthy();
     await this.page.locator(this.finishButton).click();
   };
-  
+
 }

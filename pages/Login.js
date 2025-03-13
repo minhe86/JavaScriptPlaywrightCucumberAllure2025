@@ -40,8 +40,8 @@ export default class LoginPage extends UIPage {
 
     expect(await this.page.isEditable(this.username)).toBeTruthy();
     expect(await this.page.isEditable(this.password)).toBeTruthy();
-    if (!(await this.page.isEditable(this.loginButton))) {
-      throw new Error("Login button is not editable");
+    if (!(await this.page.isVisiable(this.loginButton))) {
+      throw new Error("Login button is not visiable");
     }
   };
 }
