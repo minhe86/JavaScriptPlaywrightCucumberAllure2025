@@ -74,5 +74,8 @@ This will open a web server and display the Playwright report in your browser.
 ### [Playwright Test Runner List Result](../screenshots/PlaywrightTestRunner_list.png)
 ![](../screenshots/PlaywrightTestRunner_list.png)
 
+### [Playwright Test Runner Allure Result on Devices](../screenshots/PlaywrightTestRunner_allure_devices.png)
+![](../screenshots/PlaywrightTestRunner_allure_devices.png)
+
 
 More snapshots could be found under screenshots folder for more reference.

@@ -7,7 +7,7 @@
     "test:local": "cucumber-js --config configs/cucumber-local.mjs",
     "test:api": "cucumber-js --config configs/cucumber-api.mjs",
     "report": "allure serve allure-results",
-    "test:pw": "npx playwright test --config=playwrightTestRunner/configs/playwright.config.mjs"
+     "test:pw": "playwright test --config=playwrightTestRunner/configs/playwright.config.mjs"
   },
   "engines": {
     "node": "^20.18.0",
@@ -15,7 +15,7 @@
   },
   "author": "Min He",
   "license": "ISC",
-  "description": "Playwright with Cucumber",
+  "description": "Playwright with/without Cucumber comparison",
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",
     "@babel/register": "^7.25.9",
